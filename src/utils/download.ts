@@ -45,8 +45,8 @@ export class Download {
     const percentage = (downloaded / total) * 100;
     const progress = Math.floor(percentage / 2);
     const bar = "█".repeat(progress) + " ".repeat(50 - progress);
-    process.stdout.clearLine(0);
-    process.stdout.cursorTo(0);
+    // process.stdout.clearLine(0);
+    // process.stdout.cursorTo(0);
     process.stdout.write(
       `${logger.stamp} DOWNLOADING:[${bar}] ${percentage.toFixed(
         2
