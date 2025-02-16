@@ -161,7 +161,7 @@ export class Session {
     if (cookie.path) cookieObj.path = cookie.path;
     if (cookie.httpOnly) cookieObj.httpOnly = cookie.httpOnly;
     
-    this.jar.setCookieSync(cookieObj, url, opts);
+    this.jar.setCookieSync(cookieObj, url, {});
   }
 
   /**
