@@ -19,6 +19,7 @@ const utils_1 = require("../utils");
 const decorators_1 = require("../decorators");
 const _1 = require(".");
 const workerpool_1 = __importDefault(require("workerpool"));
+const tough_cookie_1 = require("tough-cookie");
 const __version__ = "1.0.0";
 class Session {
     sessionId;
@@ -116,6 +117,32 @@ class Session {
      */
     get cookies() {
         return this.jar.fetchAllCookies();
+    }
+    /**
+     * Sets a cookie
+     *
+     * @returns void.
+     *
+     * @example
+      setCookie
+     */
+    setCookie(cookie, url, opts) {
+        const cookieObj = new tough_cookie_1.Cookie();
+        cookieObj.key = cookie.name;
+        cookieObj.value = cookie.value;
+        if (cookie.expires)
+            cookieObj.expires = cookie.expires;
+        if (cookie.sameSite)
+            cookieObj.sameSite = cookie.sameSite;
+        if (cookie.secure)
+            cookieObj.secure = cookie.secure;
+        if (cookie.domain)
+            cookieObj.domain = cookie.domain;
+        if (cookie.path)
+            cookieObj.path = cookie.path;
+        if (cookie.httpOnly)
+            cookieObj.httpOnly = cookie.httpOnly;
+        this.jar.setCookieSync(cookieObj, url, opts);
     }
     /**
      * The 'close' method closes the current session.

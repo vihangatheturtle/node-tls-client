@@ -1,5 +1,6 @@
 import { Methods, RequestOptions, GetRequestOptions, PostRequestOptions, PatchRequestOptions, PutRequestOptions, DeleteRequestOptions, OptionsRequestOptions, HeadRequestOptions, SessionOptions } from "../interface/session";
 import { Response } from ".";
+import { Cookie, CookieJar } from "tough-cookie";
 export declare class Session {
     private sessionId?;
     private proxy?;
@@ -49,7 +50,25 @@ export declare class Session {
          }
       }
      */
-    get cookies(): import("tough-cookie").Cookie.Serialized;
+    get cookies(): Cookie.Serialized;
+    /**
+     * Sets a cookie
+     *
+     * @returns void.
+     *
+     * @example
+      setCookie
+     */
+    setCookie(cookie: {
+        name: string;
+        value: string;
+        expires?: Date;
+        sameSite?: string;
+        secure?: boolean;
+        domain?: string;
+        path?: string;
+        httpOnly?: boolean;
+    }, url: string, opts?: CookieJar.SetCookieOptions): void;
     /**
      * The 'close' method closes the current session.
      *
