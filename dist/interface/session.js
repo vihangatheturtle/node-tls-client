@@ -26,6 +26,7 @@ var ClientIdentifier;
     ClientIdentifier["chrome_124"] = "chrome_124";
     ClientIdentifier["chrome_131"] = "chrome_131";
     ClientIdentifier["chrome_131_psk"] = "chrome_131_PSK";
+    ClientIdentifier["chrome_133"] = "chrome_133";
     // Safari versions
     ClientIdentifier["safari_15_6_1"] = "safari_15_6_1";
     ClientIdentifier["safari_16_0"] = "safari_16_0";

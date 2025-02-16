@@ -106,6 +106,7 @@ export declare enum ClientIdentifier {
     chrome_124 = "chrome_124",
     chrome_131 = "chrome_131",
     chrome_131_psk = "chrome_131_PSK",
+    chrome_133 = "chrome_133",
     safari_15_6_1 = "safari_15_6_1",
     safari_16_0 = "safari_16_0",
     safari_ipad_15_6 = "safari_ipad_15_6",
