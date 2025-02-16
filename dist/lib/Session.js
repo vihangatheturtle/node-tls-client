@@ -71,6 +71,7 @@ class Session {
         this.supportedVersions = options?.supportedVersions;
         this.keyShareCurves = options?.keyShareCurves;
         this.certCompressionAlgo = options?.certCompressionAlgo;
+        this.headerOrder = options?.headerOrder;
         this.pseudoHeaderOrder = options?.pseudoHeaderOrder;
         this.connectionFlow = options?.connectionFlow;
         this.priorityFrames = options?.priorityFrames;
