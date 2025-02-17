@@ -16,7 +16,7 @@ export declare class Session {
     private pseudoHeaderOrder?;
     private connectionFlow?;
     private priorityFrames?;
-    private headerOrder?;
+    headerOrder?: string[];
     private headerPriority?;
     private randomTlsExtensionOrder?;
     private forceHttp1?;

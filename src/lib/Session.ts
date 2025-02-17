@@ -45,7 +45,7 @@ export class Session {
   private pseudoHeaderOrder?: PseudoHeaderOrder[];
   private connectionFlow?: number;
   private priorityFrames?: PriorityFrames[];
-  private headerOrder?: string[];
+  public headerOrder?: string[];
   private headerPriority?: PriorityParam;
   private randomTlsExtensionOrder?: boolean;
   private forceHttp1?: boolean;
